@@ -8,6 +8,7 @@ import ForgotScreen from './src/screens/ForgotScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import ResetScreen from './src/screens/ResetScreen';
+import SingleProductScreeen from './src/screens/SingleProductScreeen';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Auth"
             component={AuthScreen}
@@ -44,6 +45,11 @@ const App = () => {
           <Stack.Screen
             name="Navigation"
             component={TabNavigation}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Single_Product"
+            component={SingleProductScreeen}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

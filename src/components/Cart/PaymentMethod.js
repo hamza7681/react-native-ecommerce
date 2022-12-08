@@ -6,7 +6,9 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+
 } from 'react-native';
+
 
 const PaymentMethod = () => {
   const [active, setActive] = useState(0);
@@ -212,8 +214,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'justify',
     color: '#272727',
-    marginTop:10,
-    marginBottom:10
+    marginTop: 10,
+    marginBottom: 10,
   },
 });
 

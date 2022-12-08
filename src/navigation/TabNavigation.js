@@ -33,6 +33,7 @@ const TabNavigation = () => {
             },
             headerShadowVisible: false,
             headerTitleAlign: 'center',
+            headerShown: null,
           }}
         />
         <Tab.Screen
@@ -40,7 +41,7 @@ const TabNavigation = () => {
           component={SearchScreen}
           options={{
             tabBarIcon: ({color}) => {
-              return <Icon name="search1" color={color} size={20} />;
+              return <Icon name="hearto" color={color} size={20} />;
             },
             tabBarShowLabel: false,
             headerStyle: {
@@ -81,6 +82,7 @@ const TabNavigation = () => {
               return <Icon name="user" color={color} size={20} />;
             },
             headerShown: false,
+            tabBarShowLabel: false,
           }}
         />
       </Tab.Navigator>

@@ -10,10 +10,12 @@ import {
 } from 'react-native';
 import pic from '../../assets/pic.jpeg';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import AddressModal from './AddressModal';
 
 const PlaceOrder = () => {
   const [active, setActive] = useState(0);
   const [check, setCheck] = useState(0);
+  const [show, setShow] = useState(false);
   const testItems = [
     {
       pic: pic,
@@ -65,7 +67,10 @@ const PlaceOrder = () => {
           <TextInput
             placeholder="Please Select your Home Address"
             style={styles.input}
+            onFocus={() => setShow(true)}
+            showSoftInputOnFocus={false}
           />
+          <AddressModal show={show} setShow={setShow} />
         </View>
         <View style={styles.itemCount}>
           <Text style={styles.CN}>CN</Text>
